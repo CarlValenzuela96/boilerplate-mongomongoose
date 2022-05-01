@@ -85,8 +85,8 @@ const removeManyPeople = async (done) => {
 
 const queryChain = async (done) => {
   const foodToSearch = "burrito";
-
-  done(null /*, data*/);
+  let data = await Person.find({ favoriteFoods: foodToSearch }).sort('name').limit(2).select('-age').exec()
+  done(null, data);
 };
 
 /** **Well Done !!**
