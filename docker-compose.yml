@@ -46,6 +46,7 @@ services:
       MESSAGE_STYLE: ${MESSAGE_STYLE}
       NODE_ENV: production
       PORT: ${APP_PORT}
+      MONGO_URI: ${MONGO_URI}
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./certs:/etc/nginx/certs:ro
